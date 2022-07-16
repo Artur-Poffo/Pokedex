@@ -1,0 +1,151 @@
+/* STYLE BASIC: */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+    outline: none;
+}
+
+body {
+    background-color: #313131;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#title {
+    color: #eee;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fade 1.5s both;
+}
+
+.pokedex {
+    width: 20em;
+    height: 30em;
+    background-color: crimson;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 200px;
+    animation: move 2s both;
+    position: relative;
+}
+
+.before, .next {
+    color: #313131;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #eee;
+    position: absolute;
+    left: -30%;
+    bottom: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.next {
+    left: auto;
+    right: -30%;
+}
+
+.view {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.poke-name {
+    font-family: sans-serif;
+    color: #313131;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.poke-img {
+    width: 160px;
+}
+
+.hability {
+    color: #313131;
+    text-decoration: underline;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+.poke-ability {
+    color: #313131;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    list-style: decimal-leading-zero;
+    margin-left: 20px;
+}
+
+/* MEDIA SECTION: */
+
+@media (max-width: 630px) {
+    .next, .before {
+        left: 20px;
+        right: auto;
+        top: auto;
+        bottom: -12%;
+    }
+
+    .next {
+        left: auto;
+        right: 20px;
+    }
+}
+
+/* KEYFRAMES SECTION: */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+    from {
+        margin-top: 200px;
+    }
+
+    to {
+        margin-top: 0px;
+    }
+}
